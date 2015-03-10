@@ -1,0 +1,46 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Product List</div>
+    <div class="panel-body">
+        <table class="table" >
+            <thead>
+            <tr>
+                <th> <button class="btn btn-primary btnFxMd" type="button" ng-click="vm.toggleImage()">
+                    {{vm.showImage?"Hide":"Show"}} Image
+                </button></th>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Brand</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="product in vm.products">
+                <td>
+                    <!--ng-show - download image-->
+                    <!--ng-if - download image when required-->
+                    <img ng-if="vm.showImage"  ng-src="{{product.imageUrl}}"
+                         style="width: 20px; height: 20px;" />
+
+
+                </td>
+                <!--<td>{{product.name}}</td>-->
+                <td>
+                    <a ui-sref="productDetail({productId: product.productId})">
+                        {{ product.name}}</a>
+                </td>
+                <td>{{product.price}}</td>
+                <td>{{product.brand}}</td>
+                <td>
+                    <a class="btn btn-primary"
+                       ui-sref="productEdit.info({productId: product.productId})">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+

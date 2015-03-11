@@ -7,7 +7,8 @@
             ["common.services",
             "ui.router",
              "ui.mask",
-            "productResourceMock"]);
+             "ui.bootstrap",
+             "productResourceMock"]);
 
     app.config(["$stateProvider",
             "$urlRouterProvider",

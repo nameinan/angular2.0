@@ -24,11 +24,6 @@
                         templateUrl: "app/products/productListView.html",
                         controller: "ProductListCtrl as vm"
                     })
-                    .state("productEdit", {
-                        url: "/products/edit/:productId",
-                        templateUrl: "app/products/productEditView.html",
-                        controller: "ProductEditCtrl as vm"
-                    })
 
                     .state("productEdit", {
                         abstract: true,
@@ -57,13 +52,6 @@
                         templateUrl: "app/products/productEditTagsView.html"
                     })
 
-
-                    /*.state("productDetail", {
-                        url: "/products/:productId",
-                        templateUrl: "app/products/productDetailView.html",
-                        controller: "ProductDetailCtrl as vm"
-
-                    })*/
                     .state("productDetail", {
                         url: "/products/:productId",
                         templateUrl: "app/products/productDetailView.html",

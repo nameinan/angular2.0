@@ -2,7 +2,7 @@
 <html  >
 <head lang="en">
     <meta charset="UTF-8">
-    <title>ACME products</title>
+    <title>Test products</title>
 
     <!--bootstrap-->
     <link href="css/bootstrap.css" rel="stylesheet"/>
@@ -16,6 +16,7 @@
     <script src="js/angular-mocks.js"></script>
     <script src="js/angular-ui-router.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/ui-utils.js"></script>
 
      <!--application scripts-->
     <script src="app/app.js"></script>
@@ -52,7 +53,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a ui-sref="productList">Product List</a></li>
-                <li><a ui-sref="productEdit({productId:0})">
+                <li><a ui-sref="productEdit.info({productId:0})">
                     <i class="glyphicon glyphicon-plus"></i>
                     Add Product</a></li>
             </ul>

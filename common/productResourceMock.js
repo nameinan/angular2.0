@@ -18,7 +18,9 @@
                 "imageUrl":"image/shoes.jpg",
                 "releasedDate":"21/03/1981",
                 "brand":"arrow",
-                "tags":["clothes","apparel"]
+                "productCode":"AAA-1235",
+                "tags":["clothes","apparel"],
+                "description":"apparel product"
             },
 
             {
@@ -28,7 +30,9 @@
                 "imageUrl":"image/shirt.jpg",
                 "releasedDate":"21/03/1981",
                 "brand":"woodland",
-                "tags":["clothes","apparel"]
+                "productCode":"AAA-1235",
+                "tags":["clothes","apparel"],
+                "description":"apparel product"
             },
 
             {
@@ -38,7 +42,9 @@
                 "imageUrl":"image/shock.jpg",
                 "releasedDate":"21/03/1981",
                 "brand":"Jockey",
-                "tags":["clothes","apparel"]
+                "productCode":"AAA-1235",
+                "tags":["clothes","apparel"],
+                "description":"apparel product"
             }
         ];
 

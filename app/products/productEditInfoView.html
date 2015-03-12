@@ -1,25 +1,49 @@
 <form class="form-horizontal" name="productForm">
     <fieldset>
         <legend>Basic Product Information</legend>
-        <div class="form-group">
+        <div class="form-group"
+             ng-class="{'has-error':productForm.inputname.$invalid &&
+                                    productForm.inputname.$dirty}"  >
             <label class="col-md-2 control-label"
-                   for="inputProductName">Product Name</label>
+                   for="inputname">Product Name</label>
             <div class="col-md-4">
                 <input class="form-control"
-                       id="inputProductName"
+                       id="inputname"
+                       name="inputname"
                        type="text"
-                       placeholder="Product Name"
-                       ng-model="vm.product.name" />
+                        placeholder="Product Name (required)"
+                        ng-model="vm.product.name"
+                        required
+                        ng-minlength="4"
+                        ng-maxlength="12"
+                        />
             </div>
+            <span class="help-block has-error">
+                <span ng-show="productForm.inputname.$error.required">
+                    Product name is required.
+                </span>
+                <span ng-show="productForm.inputname.$error.minlength">
+                    Product name must be at least 4 characters in length.
+                </span>
+                <span ng-show="productForm.inputname.$error.maxlength">
+                    Product name cannot exceed 12 characters in length.
+                </span>
+            </span>
         </div>
         <div class="form-group">
-            <label class="col-md-2 control-label" for="inputProductCode">Product Code</label>
+            <label class="col-md-2 control-label" for="inputproductCode">Product Code</label>
             <div class="col-md-4">
                 <input class="form-control"
-                       id="inputProductCode"
-                       ui-mask="AAA-****"
-                       ng-model="vm.product.productCode">
+                       id="inputproductCode"
+                       name="inputproductCode"
+                       ui-mask="AAA-****(required)"
+                       ng-model="vm.product.productCode"
+                       required>
             </div>
+                   <span class="help-block has-error"
+                         ng-show="productForm.inputproductCode.$invalid ">
+                         Product Code is required
+                    </span>
         </div>
         <div class="form-group">
             <label class="col-md-2 control-label"
@@ -58,7 +82,9 @@
                     <span>
                         <button class="btn btn-primary"
                                 style="width:80px;margin-right:10px"
-                                ng-click="vm.submit()">
+                                ng-click="vm.submit(productForm.$valid)"
+                                ng-disabled="productForm.$invalid"
+                                >
                             Save
                         </button>
                     </span>

@@ -21,6 +21,9 @@
     <script src="js/ui-utils.js"></script>
     <script src="js/ui-bootstrap-tpls-0.12.1.min.js"></script>
     <script src="js/toastr.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/angular-charts.js"></script>
+
 
 
      <!--application scripts-->
@@ -36,6 +39,8 @@
     <script src="app/products/productListCtrl.js"></script>
     <script src="app/products/productDetailCtrl.js"></script>
     <script src="app/products/productEditCtrl.js"></script>
+    <script src="app/prices/priceAnalyticsCtrl.js"></script>
+
 
 
 </head>
@@ -62,6 +67,7 @@
                 <li><a ui-sref="productEdit.info({productId:0})">
                     <i class="glyphicon glyphicon-plus"></i>
                     Add Product</a></li>
+                <li><a ui-sref="priceAnalytics">Price Analytics</a></li>
             </ul>
         </div>
     </div>

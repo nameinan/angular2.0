@@ -14,6 +14,7 @@
             {
                 "productId":1,
                 "name":"shoes",
+                "cost": 1.00,
                 "price":20,
                 "imageUrl":"image/shoes.jpg",
                 "releasedDate":"March 19, 2009",
@@ -26,6 +27,7 @@
             {
                 "productId":2,
                 "name":"shirt",
+                "cost": 1.00,
                 "price":100,
                 "imageUrl":"image/shirt.jpg",
                 "releasedDate":"March 19, 2009",
@@ -38,6 +40,7 @@
             {
                 "productId":3,
                 "name":"shocks",
+                "cost": 1.00,
                 "price":120,
                 "imageUrl":"image/shock.jpg",
                 "releasedDate":"March 19, 2009",

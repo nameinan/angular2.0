@@ -39,3 +39,10 @@ form legend {
     background: #007ACC;
     color: #fff;
 }
+
+
+/*chart style*/
+.chart {
+    width: 100%;
+    height: 280px;
+}
